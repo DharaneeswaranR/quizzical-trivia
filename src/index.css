@@ -5,6 +5,7 @@
 
 html,
 body {
+    background-color: #F5F7FB;
     height: 100%;
 }
 
@@ -13,11 +14,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #293264;
 }
 
 .intro {
     text-align: center;
-    color: #293264;
 }
 
 .intro h1 {
@@ -42,4 +43,36 @@ body {
     border-radius: 15px;
     border: none;
     cursor: pointer;
+}
+
+.question-section {
+    padding: 30px 0 0;
+    max-width: 600px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 19px;
+}
+
+.question-section p {
+    margin-bottom: 16px;
+}
+
+.answer-options {
+    display: inline-block;
+    margin-right: 20px;
+    background: #D6DBF5;
+    border-radius: 8px;
+    padding: 6px 16px;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 12px;
+}
+
+.question-section hr {
+    color: #DBDEF0;
+    margin-top: 30px;
+}
+
+.question-section:last-child hr {
+    display: none;
 }

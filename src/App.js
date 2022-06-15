@@ -9,7 +9,7 @@ function App() {
     const [isPlaying, setIsPlaying] = useState(false)
 
     async function getQuestions() {
-        const res = await fetch("https://opentdb.com/api.php?amount=2")
+        const res = await fetch("https://opentdb.com/api.php?amount=5")
         const data = await res.json()
 
         const questionsData = data.results.map(item => {
@@ -21,7 +21,7 @@ function App() {
             }
         })
 
-        console.log(questionsData)
+        //console.log(questionsData)
         setQuestions(questionsData)
         setIsPlaying(true)
     }
