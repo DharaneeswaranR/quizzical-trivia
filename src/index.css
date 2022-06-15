@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: karla, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro {
+    text-align: center;
+    color: #293264;
+}
+
+.intro h1 {
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 37px;
+}
+
+.intro p {
+    font-weight: 400;
+    font-size: 1.1rem;
+    line-height: 19px;
+}
+
+.intro button {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #F5F7FB;
+    padding: 12px 28px;
+    background: #4D5B9E;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+}
