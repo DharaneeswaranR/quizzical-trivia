@@ -3,24 +3,36 @@ import { useState } from "react";
 
 export default function Question(props) {
     const [selected, setSelected] = useState("")
-    const { question, options } = props.data
+    const { question, options, correct_answer } = props.data
 
-    const style = {
-        backGround: selected ? "#D6DBF5" : "#F5F7FB",
-        cursor: "pointer"
+    function selectOption(option) {
+        setSelected(option)
     }
 
-    function clicked() {
-        console.log("clicked")
+    function getClassName(option) {
+        if (props.showAnswers) {
+            if (option === correct_answer) {
+                return "correct"
+            } else {
+                if (option === selected) {
+                    return "incorrect"
+                }
+            }
+        } else {
+            if (selected === option) {
+                return "selected"
+            } else {
+                return ""
+            }
+        }
     }
 
     const optionElements = options.map(option => 
         <span
-            className="answer-options"
-            style={style} 
+            className={`answer-options ${getClassName(option)}`}
             key={nanoid()}
-            onClick={clicked}>
-            {option}
+            onClick={() => selectOption(option)}
+            dangerouslySetInnerHTML={{__html: option}}>
         </span>
     )
 

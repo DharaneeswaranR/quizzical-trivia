@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { nanoid } from 'nanoid'
 import Intro from './components/Intro'
-import Questions from './components/Questions'
-import './App.css'
+import Quiz from './components/Quiz'
+import './index.css'
 
 function App() {
     const [questions, setQuestions] = useState([])
@@ -42,7 +42,7 @@ function App() {
     return (
         <main>
             {!isPlaying && <Intro startQuiz={getQuestions}/>}
-            {isPlaying && <Questions questionsData={questions}/>}
+            {isPlaying && <Quiz questionsData={questions}/>}
         </main>
     )
 }

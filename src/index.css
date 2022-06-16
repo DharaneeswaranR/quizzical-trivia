@@ -34,7 +34,7 @@ body {
     line-height: 19px;
 }
 
-.intro button {
+button {
     margin-top: 20px;
     font-size: 1.2rem;
     color: #F5F7FB;
@@ -46,7 +46,7 @@ body {
 }
 
 .question-section {
-    padding: 30px 0 0;
+    padding: 22px 0 0;
     max-width: 600px;
     font-weight: 700;
     font-size: 1.2rem;
@@ -59,20 +59,37 @@ body {
 
 .answer-options {
     display: inline-block;
-    margin-right: 20px;
-    background: #D6DBF5;
+    margin: 0 20px 10px 0;
+    cursor: pointer;
     border-radius: 8px;
     padding: 6px 16px;
     font-weight: 500;
     font-size: 1rem;
     line-height: 12px;
+    border: 2px solid #4D5B9E;
+}
+
+.selected {
+    background: #D6DBF5;
+    border: 2px solid #D6DBF5;
+}
+
+.correct {
+    background: #94D7A2;
+    border: 2px solid #94D7A2;
+}
+
+.incorrect {
+    background: #F8BCBC;
+    border: 1px solid #F8BCBC;
 }
 
 .question-section hr {
     color: #DBDEF0;
-    margin-top: 30px;
+    margin-top: 16px;
 }
 
-.question-section:last-child hr {
-    display: none;
+.check-btn {
+    text-align: center;
+    margin: 20px auto;
 }
