@@ -6,7 +6,9 @@ export default function Question(props) {
     const { question, options, correct_answer } = props.data
 
     function selectOption(option) {
-        setSelected(option)
+        if (!props.showAnswers) {
+            setSelected(option)
+        }
     }
 
     function getClassName(option) {

@@ -3,13 +3,13 @@
     margin: 0;
 }
 
-html,
-body {
-    background-color: #F5F7FB;
+html {
     height: 100%;
 }
 
 body {
+    min-height: 100%;
+    background-color: #F5F7FB;
     font-family: karla, sans-serif;
     display: flex;
     justify-content: center;
@@ -17,8 +17,11 @@ body {
     color: #293264;
 }
 
-.intro {
-    text-align: center;
+.intro,
+.quiz-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .intro h1 {
@@ -35,7 +38,7 @@ body {
 }
 
 button {
-    margin-top: 20px;
+    margin: 20px;
     font-size: 1.2rem;
     color: #F5F7FB;
     padding: 12px 28px;
@@ -44,6 +47,7 @@ button {
     border: none;
     cursor: pointer;
 }
+
 
 .question-section {
     padding: 22px 0 0;
@@ -89,7 +93,7 @@ button {
     margin-top: 16px;
 }
 
-.check-btn {
-    text-align: center;
-    margin: 20px auto;
+.btn-container {
+    display: flex;
+    justify-content: center;
 }

@@ -21,7 +21,6 @@ function App() {
             }
         })
 
-        //console.log(questionsData)
         setQuestions(questionsData)
         setIsPlaying(true)
     }
@@ -41,8 +40,10 @@ function App() {
 
     return (
         <main>
-            {!isPlaying && <Intro startQuiz={getQuestions}/>}
-            {isPlaying && <Quiz questionsData={questions}/>}
+            {isPlaying ? 
+                <Quiz questionsData={questions} getQuestions={getQuestions}/> :
+                <Intro startQuiz={getQuestions}/>
+            }
         </main>
     )
 }
