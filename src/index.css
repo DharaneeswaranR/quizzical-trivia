@@ -48,6 +48,9 @@ button {
     cursor: pointer;
 }
 
+.quiz-section {
+    padding: 0 20px;
+}
 
 .question-section {
     padding: 22px 0 0;
