@@ -1,9 +1,18 @@
+import { useState, useEffect } from "react";
 import { nanoid } from "nanoid";
-import { useState } from "react";
 
 export default function Question(props) {
     const [selected, setSelected] = useState("")
-    const { question, options, correct_answer } = props.data
+
+    const { question, options, correct_answer } = props.data 
+    const { setScore } = props
+
+    useEffect(() => {
+        if (selected === correct_answer) {
+            setScore()
+        }
+ 
+    }, [selected]) // eslint-disable-line 
 
     function selectOption(option) {
         if (!props.showAnswers) {

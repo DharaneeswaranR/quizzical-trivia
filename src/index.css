@@ -24,6 +24,10 @@ body {
     justify-content: center;
 }
 
+.intro {
+    align-items: center;
+}
+
 .intro h1 {
     margin-bottom: 15px;
     font-weight: 700;
@@ -57,7 +61,7 @@ button {
     max-width: 600px;
     font-weight: 700;
     font-size: 1.2rem;
-    line-height: 19px;
+    line-height: 22px;
 }
 
 .question-section p {
@@ -99,4 +103,18 @@ button {
 .btn-container {
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.btn-container p {
+    font-weight: 700;
+    font-size: large;
+    line-height: 15px;
+}
+
+@media (max-width: 520px) {
+    .btn-container {
+        flex-direction: column;
+        margin-top: 20px;
+    }
 }
