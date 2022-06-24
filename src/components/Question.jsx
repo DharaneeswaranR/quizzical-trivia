@@ -1,15 +1,23 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { nanoid } from "nanoid";
 
 export default function Question(props) {
     const [selected, setSelected] = useState("")
+    const alreadySelectedCorrect = useRef(false)
 
     const { question, options, correct_answer } = props.data 
-    const { setScore } = props
+    const { addScore, decScore } = props
+
 
     useEffect(() => {
-        if (selected === correct_answer) {
-            setScore()
+        if (!alreadySelectedCorrect.current && selected === correct_answer) {
+            addScore()
+            alreadySelectedCorrect.current = true
+        }
+
+        if (alreadySelectedCorrect.current && selected !== correct_answer) {
+            decScore()
+            alreadySelectedCorrect.current = false
         }
  
     }, [selected]) // eslint-disable-line 
